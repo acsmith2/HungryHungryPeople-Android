@@ -18,14 +18,16 @@
 
 	<LinearLayout
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content" >
+	    android:layout_height="wrap_content" 
+	    android:paddingTop="20dip"
+	    android:paddingBottom="20dip">
 
 	    <AutoCompleteTextView
 	        android:id="@+id/autoCompleteTextView1"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:ems="10"
-	        android:text="AutoCompleteTextView"
+	        android:hint="Burger"
 	        android:layout_weight="0.7">
 
 	        <requestFocus />
@@ -41,8 +43,12 @@
 	<GridView
 	    android:id="@+id/gridView1"
 	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:numColumns="3" >
+        android:layout_height="match_parent"
+    	android:verticalSpacing="20dip"
+    	android:horizontalSpacing="20dip"
+        android:gravity="center"
+        android:stretchMode="columnWidth"
+	    android:numColumns="2" >
 	</GridView>
 
 </LinearLayout>
