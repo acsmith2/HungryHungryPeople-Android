@@ -29,8 +29,6 @@
 	        android:ems="10"
 	        android:hint="Burger"
 	        android:layout_weight="0.7">
-
-	        <requestFocus />
 	    </AutoCompleteTextView>
 
 	    <Button

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="20dip"
+    android:background="@android:color/white">
+
+	<TextView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="10dip"
+	    android:paddingBottom="10dip"
+	    android:text="How are you getting there?"
+	    android:textSize="20sp"
+	    android:layout_gravity="center"
+	    android:gravity="center"/>
+
+	<GridView
+	    android:id="@+id/gridView2"
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    	android:verticalSpacing="30dip"
+    	android:horizontalSpacing="30dip"
+        android:gravity="center"
+        android:stretchMode="columnWidth"
+	    android:numColumns="2" >
+	</GridView>
+
+</LinearLayout>

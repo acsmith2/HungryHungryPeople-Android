@@ -14,36 +14,36 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class Main extends Activity implements View.OnClickListener{
+public class Muni extends Activity {
 	GridView mGridView;
 
-	final static String titles[] = {"burger", "cupcake", "icecream", "pizza", "sandwich", "steak"};
+	final static String titles[] = {"Car", "Bus", "Bike", "Walk"};
 	
-	final static int images[] = {R.drawable.burger, R.drawable.cupcake, R.drawable.icecream, R.drawable.pizza, R.drawable.sandwich, R.drawable.steak};
+	final static int images[] = {R.drawable.car, R.drawable.bus, R.drawable.bike, R.drawable.walk};
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.muni);
         
-		mGridView = (GridView) findViewById(R.id.gridView1);
-		mGridView.setAdapter(new FoodAdapter(this));
-		mGridView.setOnItemClickListener(new OnFoodItemClickListener());
-		
-		findViewById(R.id.button1).setOnClickListener(this);
+		mGridView = (GridView) findViewById(R.id.gridView2);
+		mGridView.setAdapter(new MuniAdapter(this));
+		mGridView.setOnItemClickListener(new OnMuniItemClickListener());
     }
 
-	private class OnFoodItemClickListener implements OnItemClickListener {
+	private class OnMuniItemClickListener implements OnItemClickListener {
 
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View view, int pos, long id) {
-			startMuni();
+			Intent i = new Intent(Muni.this, Result.class);
+			startActivity(i);
+
 		}
 	}
-	private class FoodAdapter extends BaseAdapter {
+	private class MuniAdapter extends BaseAdapter {
 		private LayoutInflater mInflater;
 
-		public FoodAdapter(Context context) {
+		public MuniAdapter(Context context) {
 			mInflater = LayoutInflater.from(context);
 		}
 
@@ -98,14 +98,5 @@ public class Main extends Activity implements View.OnClickListener{
 			ImageView image;
 		}
 	}
-	@Override
-	public void onClick(View v) {
-		startMuni();
-	}
 
-	private void startMuni()
-	{
-		Intent i = new Intent(this, Muni.class);
-		startActivity(i);
-	}
 }
