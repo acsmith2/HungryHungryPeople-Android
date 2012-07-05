@@ -20,22 +20,28 @@
         <TextView android:id="@+id/dish_name"
         	android:layout_width="match_parent"
         	android:layout_height="wrap_content"
-        	android:text="SUPER BURGER"/>
+        	android:text="SUPER BURGER"
+        	android:textSize="20sp"
+        	style="@style/info"/>
         <TextView android:id="@+id/restaurant_name"
         	android:layout_width="match_parent"
         	android:layout_height="wrap_content"
         	android:layout_below="@id/dish_name"
-        	android:text="at SUPER DUPER"/>
+        	android:text="at SUPER DUPER"
+			style="@style/info"/>
         <TextView android:id="@+id/address"
         	android:layout_width="match_parent"
         	android:layout_height="wrap_content"
         	android:layout_below="@id/restaurant_name"
-        	android:text="711 Market st"/>
+        	android:text="711 Market st"
+			style="@style/info"/>
         <TextView android:id="@+id/time_to_eat"
         	android:layout_width="match_parent"
         	android:layout_height="wrap_content"
         	android:layout_below="@id/address"
-        	android:text="In 3 minutes"/>
+        	android:text="In 3 minutes"
+        	style="@style/info"/>
+
 
         <ImageView android:id="@+id/mapit"
         	android:layout_width="wrap_content"
@@ -46,10 +52,13 @@
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
         	android:src="@drawable/call"
-        	android:layout_toLeftOf="@id/mapit"/>
+        	android:layout_toLeftOf="@id/mapit"
+        	android:layout_marginRight="10dip"/>
+
         <TextView android:id="@+id/more"
         	android:layout_width="match_parent"
-        	android:layout_height="wrap_content"/>
+        	android:layout_height="wrap_content"
+        	style="@style/info"/>
         
 	</RelativeLayout>
 
