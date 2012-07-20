@@ -1,0 +1,8 @@
+    <resources>
+        <string name="server_url">http://hhp.com/hhp</string>
+        <string name="find_food_uri">/findFood</string>
+        <string name="version">/v1</string>
+        <string name="food_feedback_uri">/foodFeedback</string>
+        <string name="get_history_uri">getHistory</string>
+        <string name="get_popular_searches_uri">getPopularSearches</string>
+    </resources>
